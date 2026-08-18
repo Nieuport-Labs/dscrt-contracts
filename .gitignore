@@ -1,0 +1,42 @@
+# Rust
+/target
+**/*.rs.bk
+
+# Compiled contract artifacts
+*.wasm
+*.wasm.gz
+/artifacts
+/optimized-wasm
+
+# Node
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# Environment / secrets — keeper and deploy mnemonics must never be committed
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+/deploy/*.json
+!/deploy/*.example.json
+
+# Devnet runtime state
+/devnet/.state/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Deployment records are environment-specific; devnet ones are throwaway.
+/deploy/devnet.json
+
+# Frontend build output and local pointers
+/app/.next
+/app/out
+/app/.env.local
